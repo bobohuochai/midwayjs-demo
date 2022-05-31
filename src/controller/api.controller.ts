@@ -25,7 +25,10 @@ export class APIController {
   }
 
   @Post('/upload')
-  async upload(@Files() files, @Fields() fields) {
+  async upload(
+    @Files() files: { data: string; fileName: string },
+    @Fields() fields: { test: string }
+  ) {
     return { files, fields };
   }
 }
