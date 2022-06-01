@@ -9,6 +9,11 @@ import {
 } from '@midwayjs/decorator';
 import { Context } from '@midwayjs/koa';
 import { UserService } from '../service/user.service';
+import {
+  OssMultipleUploadResponseDto,
+  OssUploadResponseDataDto,
+} from '../dto/api';
+import { ApiBody, ApiResponse } from '@midwayjs/swagger';
 
 @Controller('/api')
 export class APIController {
@@ -25,9 +30,15 @@ export class APIController {
   }
 
   @Post('/upload')
+  @ApiBody({
+    type: OssUploadResponseDataDto,
+  })
+  @ApiResponse({
+    type: OssMultipleUploadResponseDto,
+  })
   async upload(
     @Files() files: { data: string; fileName: string },
-    @Fields() fields: { test: string }
+    @Fields() fields: OssUploadResponseDataDto
   ) {
     return { files, fields };
   }
