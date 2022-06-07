@@ -1,6 +1,5 @@
-import { createApp, close } from '@midwayjs/mock'
+import { createApp, close,createSocketIOClient } from '@midwayjs/mock'
 import { Framework } from '@midwayjs/koa';
-import { createSocketIOClient } from '@midwayjs/mock';
 
 
 describe('test socketio ', () => {
@@ -12,9 +11,9 @@ describe('test socketio ', () => {
 
     // 创建一个对应的客户端
     const client = await createSocketIOClient({
-      port: 7001,
-    });
-
+        port:3000,
+        path:'/socketio'
+    })
     // 拿到结果返回
     const data = await new Promise(resolve => {
       client.on('myEventResult', resolve);
