@@ -10,6 +10,7 @@
     "@midwayjs/info": "^3.0.0",
     "@midwayjs/koa": "^3.0.0",
     "@midwayjs/logger": "^2.14.0",
+    "@midwayjs/socketio": "^3",
     "@midwayjs/swagger": "^3.3.8",
     "@midwayjs/validate": "^3.0.0",
     "swagger-ui-dist": "^4.11.1"
@@ -20,9 +21,11 @@
     "@types/jest": "^26.0.10",
     "@types/koa": "^2.13.4",
     "@types/node": "14",
+    "@types/socket.io-client": "^3.0.0",
     "cross-env": "^6.0.0",
     "jest": "^26.4.0",
     "mwts": "^1.0.5",
+    "socket.io-client": "^4.5.1",
     "ts-jest": "^26.2.0",
     "typescript": "~4.6.0"
   },

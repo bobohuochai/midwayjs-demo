@@ -1,5 +1,6 @@
 import { Configuration, App } from '@midwayjs/decorator';
 import * as koa from '@midwayjs/koa';
+import * as socketio from '@midwayjs/socketio';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
 import { join } from 'path';
@@ -11,6 +12,7 @@ import * as swagger from '@midwayjs/swagger';
 @Configuration({
   imports: [
     koa,
+    socketio,
     validate,
     {
       component: info,
