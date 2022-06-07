@@ -1,7 +1,7 @@
 import { WSController, Inject, OnWSMessage, WSEmit } from '@midwayjs/decorator';
 import { Context } from '@midwayjs/socketio';
 
-@WSController('/socketio')
+@WSController('/')
 export class HelloSocketController {
   @Inject()
   ctx: Context;
