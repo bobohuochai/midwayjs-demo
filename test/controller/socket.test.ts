@@ -3,7 +3,7 @@ import { Framework } from '@midwayjs/koa';
 import { createSocketIOClient } from '@midwayjs/mock';
 
 
-describe('/test/index.test.ts', () => {
+describe('test socketio ', () => {
 
     it('should test create socket app', async () => {
 
