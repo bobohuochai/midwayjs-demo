@@ -5,6 +5,6 @@ export default {
     port: null,
   },
   socketIO: {
-    port: 3000,
+    port: 7001,
   },
 } as MidwayConfig;

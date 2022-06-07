@@ -12,7 +12,7 @@ describe('test socketio ', () => {
 
     // 创建一个对应的客户端
     const client = await createSocketIOClient({
-      port: 3000,
+      port: 7001,
     });
 
     // 拿到结果返回
